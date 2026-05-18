@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Ir. Soekarno - Bapak Proklamator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        merah: '#B80000',
+                        putih: '#FFFFFF',
+                        emas: '#D4AF37',
+                        tua: '#2C2C2C',
+                        krem: '#F5F0E1',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scroll-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scroll-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .teks-rata-kiri {
+                text-align: left;
+            }
+            .bayangan-teks {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .garis-tepi {
+                position: relative;
+            }
+            .garis-tepi::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background-color: #D4AF37;
+                border-radius: 2px;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-krem font-sans text-tua">
+    <!-- Navigasi -->
+    <nav class="fixed w-full bg-merah/95 backdrop-blur-sm shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-putih font-serif bayangan-teks">IR. SOEKARNO</a>
+            <div class="hidden md:flex gap-8">
+                <a href="#beranda" class="text-putih hover:text-emas transition-colors font-medium">Beranda</a>
+                <a href="#biografi" class="text-putih hover:text-emas transition-colors font-medium">Biografi</a>
+                <a href="#perjuangan" class="text-putih hover:text-emas tra nsition-colors font-medium">Perjuangan</a>
+                <a href="#warisan" class="text-putih hover:text-emas transition-colors font-medium">Warisan</a>
+                <a href="#kutipan" class="text-putih hover:text-emas transition-colors font-medium">Kutipan</a>
+                <a href="proyek portofolio.html" class="text-putih hover:text-emas transition-colors font-medium">home</a>
+            </div>
+            <button class="md:hidden text-putih text-xl" id="tombolMenu">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-merah/90 shadow-lg" id="menuMobile">
+            <div class="flex flex-col gap-3 p-4">
+                <a href="#beranda" class="text-putih hover:text-emas transition-colors">Beranda</a>
+                <a href="#biografi" class="text-putih hover:text-emas transition-colors">Biografi</a>
+                <a href="#perjuangan" class="text-putih hover:text-emas transition-colors">Perjuangan</a>
+                <a href="#warisan" class="text-putih hover:text-emas transition-colors">Warisan</a>
+                <a href="#kutipan" class="text-putih hover:text-emas transition-colors">Kutipan</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian Beranda -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden" id="beranda">
+        <div class="absolute inset-0 z-0">
+            <img src="soekarno.jfif" alt="Latar Belakang Sejarah" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-merah/40 to-krem/80"></div>
+        </div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center order-2 md:order-1">
+                    <div class="relative w-[300px] h-[400px] md:w-[380px] md:h-[500px] rounded-lg overflow-hidden shadow-2xl border-8 border-putih transform hover:scale-[1.02] transition-all duration-500">
+                        <img src="soekarno.jfif" alt="Ir. Soekarno" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-merah/90 to-transparent p-4">
+                            <p class="text-putih font-serif font-bold text-xl">1901 - 1970</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teks-rata-kiri order-1 md:order-2">
+                    <h1 class="text-[clamp(2.8rem,6vw,5rem)] font-bold font-serif leading-tight text-merah bayangan-teks">
+                        Ir. Soekarno
+                    </h1>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold text-emas mb-4">
+                        Bapak Proklamator Kemerdekaan
+                    </h2>
+                    <p class="text-tua/80 text-lg mb-8 leading-relaxed">
+                        Presiden pertama Republik Indonesia, pemimpin perjuangan kemerdekaan, arsitek bangsa, dan orator ulung yang mempersatukan nusantara di bawah semboyan <span class="font-bold text-merah">"Bhinneka Tunggal Ika"</span>.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#biografi" class="bg-merah hover:bg-merah/90 text-putih px-8 py-3 rounded-lg font-medium transition-all transform hover:scale-105 active:scale-95 shadow-lg">
+                            Kenali Lebih Dekat
+                        </a>
+                        <a href="#kutipan" class="border-2 border-emas text-emas hover:bg-emas/10 px-8 py-3 rounded-lg font-medium transition-all">
+                            Kata-kata Emas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Biografi -->
+    <section class="py-20 bg-putih" id="biografi">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 font-serif text-merah garis-tepi">Biografi Singkat</h2>
+            <div class="max-w-4xl mx-auto teks-rata-kiri space-y-6">
+                <p class="text-tua/80 text-lg leading-relaxed">
+                    Lahir dengan nama <strong>Koesno Sosrodihardjo</strong> di Surabaya, 6 Juni 1901, beliau kemudian dikenal sebagai Soekarno. Putra dari pasangan Raden Soekemi Sosrodihardjo dan Ida Ayu Nyoman Rai. Sejak muda, beliau sudah menunjukkan kecerdasan luar biasa dan semangat nasionalisme yang tinggi.
+                </p>
+                <p class="text-tua/80 text-lg leading-relaxed">
+                    Pendidikan ditempuh di HBS (Hoogere Burger School) di Surabaya, lalu melanjutkan ke THS (Technische Hoogeschool te Bandoeng) atau sekarang ITB, dan lulus sebagai Insinyur Teknik Sipil pada tahun 1926. Di masa studi inilah pemikiran politik dan kebangsaan beliau semakin matang.
+                </p>
+                <p class="text-tua/80 text-lg leading-relaxed">
+                    Perjalanan hidupnya penuh dengan dinamika perjuangan: mendirikan organisasi, dipenjara, diasingkan Belanda, hingga akhirnya memproklamasikan kemerdekaan Indonesia pada 17 Agustus 1945 bersama Drs. Moh. Hatta. Beliau menjabat sebagai Presiden RI pertama dari tahun 1945 hingga 1967.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
+                <div class="bg-krem p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2">
+                    <div class="text-merah text-4xl mb-3"><i class="fa fa-calendar"></i></div>
+                    <h3 class="font-bold text-xl mb-2 font-serif">Masa Muda & Pendidikan</h3>
+                    <p class="text-tua/70">Dibesarkan dalam lingkungan multibudaya, belajar tentang arsitektur dan politik, serta mulai menyusun gagasan tentang Indonesia Merdeka.</p>
+                </div>
+                <div class="bg-krem p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2">
+                    <div class="text-merah text-4xl mb-3"><i class="fa fa-flag"></i></div>
+                    <h3 class="font-bold text-xl mb-2 font-serif">Masa Perjuangan</h3>
+                    <p class="text-tua/70">Aktif dalam organisasi pergerakan nasional, menulis gagasan persatuan, mengalami pembuangan dan tahanan demi kemerdekaan bangsa.</p>
+                </div>
+                <div class="bg-krem p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2">
+                    <div class="text-merah text-4xl mb-3"><i class="fa fa-university"></i></div>
+                    <h3 class="font-bold text-xl mb-2 font-serif">Masa Kepemimpinan</h3>
+                    <p class="text-tua/70">Memimpin negara dari masa revolusi hingga pembangunan, meletakkan dasar negara, dan membangun citra Indonesia di kancah dunia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Perjuangan & Prestasi -->
+    <section class="py-20 bg-gradient-to-b from-krem to-putih" id="perjuangan">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 font-serif text-merah garis-tepi">Jejak Perjuangan</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="bg-putih p-6 rounded-lg shadow-lg border-l-4 border-emas hover:shadow-2xl transition-shadow">
+                    <h3 class="font-bold text-xl text-tua mb-2 font-serif">◉ Pendiri Negara</h3>
+                    <p class="text-tua/80">Berperan besar dalam merumuskan dasar negara <strong>Pancasila</strong>, UUD 1945, dan Negara Kesatuan Republik Indonesia sebagai bentuk persatuan wilayah nusantara.</p>
+                </div>
+                <div class="bg-putih p-6 rounded-lg shadow-lg border-l-4 border-emas hover:shadow-2xl transition-shadow">
+                    <h3 class="font-bold text-xl text-tua mb-2 font-serif">◉ Proklamator Kemerdekaan</h3>
+                    <p class="text-tua/80">Membacakan teks Proklamasi Kemerdekaan Indonesia pada 17 Agustus 1945, menjadi tonggak sejarah berakhirnya penjajahan di Indonesia.</p>
+                </div>
+                <div class="bg-putih p-6 rounded-lg shadow-lg border-l-4 border-emas hover:shadow-2xl transition-shadow">
+                    <h3 class="font-bold text-xl text-tua mb-2 font-serif">◉ Diplomasi Internasional</h3>
+                    <p class="text-tua/80">Membangun persahabatan dengan negara-negara lain, menjadi inisiasi <strong>Konferensi Asia Afrika (KAA) 1955</strong>, yang menjadi cikal bakal Gerakan Non-Blok.</p>
+                </div>
+                <div class="bg-putih p-6 rounded-lg shadow-lg border-l-4 border-emas hover:shadow-2xl transition-shadow">
+                    <h3 class="font-bold text-xl text-tua mb-2 font-serif">◉ Pembangunan Ikonik</h3>
+                    <p class="text-tua/80">Menggagas pembangunan monumen dan gedung bersejarah seperti Monas, Masjid Istiqlal, Stadion GBK, dan Gedung DPR/MPR sebagai simbol kebanggaan bangsa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Warisan & Pemikiran -->
+    <section class="py-20 bg-putih" id="warisan">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 font-serif text-merah garis-tepi">Warisan Pemikiran</h2>
+            <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold font-serif text-tua">Pancasila</h3>
+                    <p class="text-tua/80 text-lg leading-relaxed">Dasar filsafat negara yang dirancang untuk menyatukan keberagaman suku, agama, ras, dan budaya di Indonesia dalam satu ikatan persaudaraan dan persatuan.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold font-serif text-tua">Bhinneka Tunggal Ika</h3>
+                    <p class="text-tua/80 text-lg leading-relaxed">Semboyan negara yang bermakna "Berbeda-beda tetapi tetap satu". Ini adalah inti dari pemikiran Soekarno tentang persatuan di tengah kemajemukan nusantara.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold font-serif text-tua">Nasakom</h3>
+                    <p class="text-tua/80 text-lg leading-relaxed">Konsep persatuan antara Nasionalisme, Agama, dan Komunisme yang dicetuskan untuk menyatukan berbagai kekuatan politik demi keutuhan negara, meski menjadi konsep yang diperdebatkan sejarah.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-semibold font-serif text-tua">Kepribadian Indonesia</h3>
+                    <p class="text-tua/80 text-lg leading-relaxed">Pemikiran bahwa bangsa Indonesia harus berdiri di atas kaki sendiri, memiliki jati diri budaya sendiri, dan tidak menjadi bangsa peniru bangsa lain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kutipan -->
+    <section class="py-20 bg-merah text-putih" id="kutipan">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text
